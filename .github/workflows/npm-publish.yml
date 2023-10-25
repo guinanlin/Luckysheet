@@ -1,10 +1,10 @@
-name: 发布maisheet到npm js
+name: 发布到Package到Node.js
 on:
-  workflow_dispatch: #github页面手动触发
+  release:
+    types: [created]
   push:
-    tags:
-      - "v*.*"
-
+    branches:
+      - dev
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -17,5 +17,5 @@ jobs:
       - run: npm install
       - run: npm publish
         env:
-          # 通过NPM_TOKEN，Github Action才可以直接发布
+            # 通过NPM_TOKEN，Github Action才可以直接发布
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
