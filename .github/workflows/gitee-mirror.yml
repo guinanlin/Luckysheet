@@ -11,7 +11,7 @@ name: gitee-mirror<sync2gitee.com>
 on:
   push:
     branches:
-      - '*'
+      - 'none'
 
 jobs:
   # This workflow contains a single job called "build"
