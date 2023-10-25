@@ -1,5 +1,5 @@
 {
-  "name": "luckysheet",
+  "name": "maisheet",
   "version": "2.1.13",
   "main": "dist/luckysheet.cjs.js",
   "module": "dist/luckysheet.esm.js",
