@@ -1,11 +1,6 @@
 name: 发布demoPage到github
 
-on:
-  release:
-    types: [created]
-  push:
-    branches:
-      - dev
+on: workflow_dispatch
 
 jobs:
   publish:
