@@ -1,6 +1,9 @@
 name: 发布maisheet到npm js
 on:
-  workflow_dispatch
+  workflow_dispatch: #github页面手动触发
+  push:
+    tags:
+      - "v*.*"
 
 jobs:
   build:
