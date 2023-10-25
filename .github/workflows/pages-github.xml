@@ -2,9 +2,11 @@ name: 发布demo page到github
 
 on:
   workflow_dispatch: #github页面手动触发
+  release:
+    types: [created]
   push:
-    tags:
-      - 'v*'
+    branches:
+      - dev
 
 jobs:
   publish:
